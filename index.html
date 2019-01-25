@@ -170,5 +170,19 @@
       document.getElementById('ingreso').className = "";
     }
   }
-  toggle();
+
+  document.addEventListener("DOMContentLoaded", function(event) {
+    toggle();
+  });
+
+  document.getElementById("money").addEventListener("keydown", function(e) {
+    // if (!e) { var e = window.event; }
+    // e.preventDefault(); // sometimes useful
+
+    if (e.keyCode == 13) { submitFunction(); }
+  }, false);
+
+  function submitFunction(){
+    location.reload();
+  }
 </script>
